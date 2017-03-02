@@ -69,7 +69,7 @@ int main(int argc, const char **argv){
     
     print_stdout();
     close(1);
-    int fd = creat("salida.out", 0666);
+    int fd = creat("results.out", 0666);
     file_out();
     close(fd);
     
