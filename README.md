@@ -4,14 +4,16 @@ Concurrent implementation of Aho-Corasick algorithm in C using pthread. This sys
 
 
 Usage: 
+
 $gcc main.c fifo.c search.c stateMachine.c inputOutput.c -o match -Wall
 
 $./match text.in keys.in N_threads
 
 
 Outputs:
-stdout: keyname	timesfound
+
+stdout: key_name	times_found
 
 sdterr: setup_time	search_time	cleanup_time
 
-results.out: keyname		times_found		 positions_found	
+results.out: key_name		times_found		 positions_found	
