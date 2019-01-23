@@ -37,24 +37,22 @@ int main(int argc, const char **argv){
     //cpnstruimos maquina estados
     build_roboto();
     
-    gettimeofday(&tf,NULL);//Instante final de Tbefore
+    gettimeofday(&tf, NULL);//Instante final de Tbefore
     t_before = ((tf.tv_usec - ti.tv_usec) + ((tf.tv_sec - ti.tv_sec)*1000000.0f));
-    gettimeofday(&ti,NULL);//Instante inicial de TSearch
+    gettimeofday(&ti, NULL);//Instante inicial de TSearch
     
     th_struct *mi_struct;
     
     if (N_th == 1){
         mi_struct = th_init(N_th);
-        //printf("mi puta vida\n");
         AC_search();
-        //printf("mi puta vidav2\n");
     }
     else{
     //comenzamos busqueda
         mi_struct = th_init(N_th);
         
         for(int i = 0; i<N_th; i++){
-            pthread_join(threads[i],NULL); //creo que existe alternativa a esto que no bloquea
+            pthread_join(threads[i], NULL);
         }
 }
 
